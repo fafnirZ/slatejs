@@ -9,7 +9,7 @@ export default function EditorComponent({}) {
     {
       type: 'paragraph',
       children: [
-        { text: 'asdf', bold: true }
+        { text: '' }
       ],
     },
   ])
@@ -68,6 +68,12 @@ export default function EditorComponent({}) {
       toggleMark(editor, "italic")
     }}>
       italic
+    </button>    
+    <button onClick={event => {
+      event.preventDefault();
+      toggleMark(editor, "underline")
+    }}>
+      underline
     </button>
     <div style={{
       background: "white",
